@@ -7,10 +7,18 @@ export class GfBase extends HTMLElement {
     const shadow = this.attachShadow({ mode: 'open' });
   }
 
+  connectedCallBack() {
+
+  }
+
+  disconnectedCallback() {
+
+  }
+
   attributeChangedCallback(name, oldValue, newValue) {
-    if(name === 'borderColor') {
+    if (name === 'borderColor') {
       console.log(newValue);
-      this.borderColor = newValue;
+      this.shadowRoot.style.borderColor = newValue;
     }
   }
 

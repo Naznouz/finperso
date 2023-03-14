@@ -3,11 +3,11 @@ import { html, css, GfBase } from './GfBase.js';
 export default class GfSelect extends GfBase {
   constructor() {
     super();
-    
+
     this.shadowRoot.innerHTML = html`
     <div>
       <label for="select-${this.getAttribute('id')}">Choix</label>
-      <select if="select-${this.getAttribute('id')}"></select>
+      <select id="select-${this.getAttribute('id')}"></select>
     </div>
     <style>
       div {
@@ -17,6 +17,7 @@ export default class GfSelect extends GfBase {
         */
         background-color: #00808020;
         padding: 0.5rem;
+        border: 1px solid;
       }
       
       label {
