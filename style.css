@@ -1,0 +1,5 @@
+.invalid {
+  border-color: red;
+  border-radius: 0.25rem;
+  background-color: lightpink;
+}
