@@ -1,7 +1,7 @@
 import { html, css, GfBase } from './GfBase.js'
 
 export default class GfButton extends GfBase {
-  constructor () {
+  constructor() {
     super()
 
     this.shadowRoot.innerHTML = html`

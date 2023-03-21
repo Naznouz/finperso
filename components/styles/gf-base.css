@@ -8,4 +8,7 @@
   --gf-on-primary: #ffffff;
   --gf-on-secondary: #161616;
   --gf-on-tertiary: #161616;
+  --gf-translucid: #80808080;
+  --gf-error: pink;
+  --gf-on-error: red;
 }

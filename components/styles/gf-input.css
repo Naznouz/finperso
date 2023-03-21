@@ -1,0 +1,28 @@
+@import url('/components/styles/gf-base.css');
+
+slot[name="label"] {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+::slotted(div) {
+  width: 100%;
+  padding-block-start: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border: 0px;
+  border-bottom: 1px solid var(--gf-translucid);
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--gf-surface);
+}
+
+slot[name="aide"] {
+  visibility: visible;
+  color: var(--gf-tertiary);
+}
+
+slot[name="erreur"] {
+  display: none;
+  background-color: var(--gf-error);
+  color: var(--gf-on-error);
+}

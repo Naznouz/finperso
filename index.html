@@ -22,10 +22,11 @@
             <option value="loyer">Loyer</option>
           </select>
         </div>
-        <div id="input-montant">
-          <label for="montant"> Montant : </label>
-          <input id="montant" name="montant" type="number" value="0" required />
-        </div>
+        <gf-number-input value="0">
+          <label slot="label">Montant</label>
+          <span slot="aide">Saisir un nombre positif. Les décimales (.) sont autorisées.</span>
+          <span slot="erreur">Le montant saisie est erronée.</span>
+        </gf-number-input>
         <div id="input-date">
           <label for="date"> Date de la d&eacute;pense : </label>
           <input id="date" name="date" type="date" value="" required />
@@ -46,6 +47,9 @@
         </thead>
         <tbody></tbody>
       </table>
+    </section>
+    <section id="transactions">
+      <gf-liste-transactions></gf-liste-transactions>
     </section>
     <script src="./gestionfin.js"></script>
   </body>
