@@ -1,0 +1,8 @@
+@import url("") button {
+    background-color: var(--gf-primary);
+    border-radius: 0.125rem;
+    border: none;
+    color: var(--gf-surface);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}

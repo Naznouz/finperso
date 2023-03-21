@@ -1,0 +1,16 @@
+.gf-input {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.gf-input label {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.gf-input input {
+	height: 45px;
+	text-align: left;
+	padding: 10px 15px;
+}

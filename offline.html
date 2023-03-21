@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gestion Finances - Accueil</title>
+		<link rel="stylesheet" href="./style/app.css" />
+	</head>
+	<body>
+		<div class="container">
+            <h1>Bienvenue !</h1>
+            <h2>Vous avez besoin d'un compte pour utiliser FinPerso.</h2>
+            <a href="login.html" class="part bot-separator">
+                <p>Vous avez déjà un compte ?</p>
+                <h3>Connectez-vous !</h3>
+            </a>
+            <a href="register.html" class="part">
+                <p>Vous n'avez pas encore de compte ?</p>
+                <h3>Créez-en un !</h3>
+            <a>
+        </div>
+		<style>
+            * {
+                font-family: Arial;
+                text-align: center;
+            }
+
+			.container {
+				display: flex;
+                flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-color: var(--white);
+			}
+            
+            .container h2 {
+                margin: 20px;
+            }
+
+            .container .part {
+                background-color: var(--primary-color);
+                border: 15px solid var(--primary-color);
+                border-radius: 10px;
+                width: 80%;
+            }
+
+            .container .part h3 {
+                color: var(--light-grey);
+            }
+
+            .container .part p {
+                color: var(--white);
+            }
+
+            .container .part.bot-separator {
+                margin-bottom: 10px;
+            }
+
+		</style>
+	</body>
+</html>
