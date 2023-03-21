@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finances Perso</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./components.js" type="module" defer></script>
-</head>
-<body>
-  <gf-select
-    id="sample1"
-    label="Choix"
-    borderColor = "#FF0000"
-  >
-          <option value="">Choisir type dépense</option>
-          <option value="alimentation">Alimentation</option>
-  </gf-select>
-  <h1>Finances Perso</h1>
-  <section id="saisie">
-    <form>
-      <div id="input-type">
-        <label for="type">
-          Type de d&eacute;pense :
-        </label>
-        <select id="type" name="type" required>
-          <option value="">Choisir type dépense</option>
-          <option value="alimentation">Alimentation</option>
-          <option value="vetements">V&ecirc;tements</option>
-          <option value="loisirs">Loisirs</option>
-          <option value="loyer">Loyer</option>
-        </select>
-      </div>
-      <div id="input-montant">
-        <label for="montant">
-          Montant :
-        </label>
-        <input id="montant" name="montant" type="number" value="0" required>
-      </div>
-      <div id="input-date">
-        <label for="date">
-          Date de la d&eacute;pense :
-        </label>
-        <input id="date" name="date" type="date" value="" required>
-      </div>
-      <button id="btn-soumettre" type="button" onclick="saveData();">
-        Ajouter d&eacute;pense
-      </button>
-    </form>
-  </section>
-  <section id="affichage">
-    <table id="depenses">
-      <thead>
-        <th>Id</th>
-        <th>Date</th>
-        <th>Type</th>
-        <th>Montant</th>
-        <th>Supprimer</th>
-      </thead>
-      <tbody>
-        
-      </tbody>
-    </table>
-  </section>
-  <script src="./gestionfin.js" type="module" ></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finances Perso</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./components.js" type="module" defer></script>
+  </head>
+  <body>
+    <h1>Finances Perso</h1>
+    <section id="saisie">
+      <form>
+        <div id="input-type">
+          <label for="type"> Type de d&eacute;pense : </label>
+          <select id="type" name="type" required>
+            <option value="">Choisir type dépense</option>
+            <option value="alimentation">Alimentation</option>
+            <option value="vetements">V&ecirc;tements</option>
+            <option value="loisirs">Loisirs</option>
+            <option value="loyer">Loyer</option>
+          </select>
+        </div>
+        <div id="input-montant">
+          <label for="montant"> Montant : </label>
+          <input id="montant" name="montant" type="number" value="0" required />
+        </div>
+        <div id="input-date">
+          <label for="date"> Date de la d&eacute;pense : </label>
+          <input id="date" name="date" type="date" value="" required />
+        </div>
+        <button id="btn-soumettre" type="button" onclick="saveData();">
+          Ajouter d&eacute;pense
+        </button>
+      </form>
+    </section>
+    <section id="affichage">
+      <table id="depenses">
+        <thead>
+          <th>Id</th>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Montant</th>
+          <th>Supprimer</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <script src="./gestionfin.js"></script>
+  </body>
 </html>
-
-
 
 <!--
   Les différentes notations :
