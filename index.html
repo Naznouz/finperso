@@ -11,32 +11,35 @@
   </head>
   <body>
     <h1>Finances Perso</h1>
-    <section id="saisie">
-      <form>
-        <gf-type-selection id="type">
-          <label slot="label" for="type"> Type de d&eacute;pense :</label>
-          <option value="">Choisir type dépense</option>
-          <option value="alimentation">Alimentation</option>
-          <option value="vetements">V&ecirc;tements</option>
-          <option value="loisirs">Loisirs</option>
-          <option value="loyer">Loyer</option>
-        </gf-type-selection>
-        <gf-number-input value="0" id="montant">
-          <label slot="label">Montant</label>
-          <span slot="aide"
-            >Saisir un nombre positif. Les décimales (.) sont autorisées.</span
-          >
-          <span slot="erreur">Le montant saisie est erronée.</span>
-        </gf-number-input>
-        <div id="input-date">
-          <label for="date"> Date de la d&eacute;pense : </label>
-          <input id="date" name="date" type="date" value="" required />
-        </div>
-        <button id="btn-soumettre" type="button" onclick="saveData();">
-          Ajouter d&eacute;pense
-        </button>
-      </form>
-    </section>
+    <gf-form-card>
+      <gf-button>+</gf-button>
+      <section id="saisie">
+        <form>
+          <gf-type-selection id="type">
+            <label slot="label" for="type"> Type de d&eacute;pense :</label>
+            <option value="">Choisir type dépense</option>
+            <option value="alimentation">Alimentation</option>
+            <option value="vetements">V&ecirc;tements</option>
+            <option value="loisirs">Loisirs</option>
+            <option value="loyer">Loyer</option>
+          </gf-type-selection>
+          <gf-number-input value="0" id="montant">
+            <label slot="label">Montant</label>
+            <span slot="aide"
+              >Saisir un nombre positif. Les décimales (.) sont autorisées.</span
+            >
+            <span slot="erreur">Le montant saisie est erronée.</span>
+          </gf-number-input>
+          <div id="input-date">
+            <label for="date"> Date de la d&eacute;pense : </label>
+            <input id="date" name="date" type="date" value="" required />
+          </div>
+          <button id="btn-soumettre" type="button" onclick="saveData();">
+            Ajouter d&eacute;pense
+          </button>
+        </form>
+      </section>
+    </gf-form-card>
     <section id="affichage">
       <table id="depenses">
         <thead>

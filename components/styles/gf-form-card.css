@@ -1,0 +1,23 @@
+.gf-form-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  .gf-form-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .gf-form-card__header-icon {
+    font-size: 24px;
+  }
+  .gf-form-card--expanded .gf-form-card__content {
+    display: block;
+  }
+  .gf-form-card__content {
+    display: none;
+    margin-top: 16px;
+  }

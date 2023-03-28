@@ -5,12 +5,14 @@ import GfSpacer from './components/GfSpacer.js'
 import GfNumberInput from './components/GfNumberInput.js'
 import GfTypeSelection from './components/GfTypeSelection.js'
 import { State, useState } from './state.js'
+import GfFormCard from './components/GfFormCard.js'
 
 window.customElements.define(GfTypeSelection.tag, GfTypeSelection)
 window.customElements.define('gf-button', GfButton)
 window.customElements.define('gf-liste-transactions', GfListeTransactions)
 window.customElements.define('gf-spacer', GfSpacer)
 window.customElements.define('gf-number-input', GfNumberInput)
+window.customElements.define('gf-form-card', GfFormCard)
 window.State = State
 window.useState = useState
 

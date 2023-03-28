@@ -2,9 +2,14 @@
 
 button {
   background-color: var(--gf-primary);
-  border-radius: 0.125rem;
   border: none;
   color: var(--gf-on-primary);
-  font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
