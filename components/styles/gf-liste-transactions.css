@@ -7,7 +7,7 @@ ul {
 
 li {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   background-color: var(--gf-surface);
   padding: 0.25rem;
   border-bottom: 1px solid var(--gf-translucid);
@@ -18,10 +18,21 @@ li:last-child {
 }
 
 #typeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 3rem;
   width: 3rem;
   background-color: var(--gf-tertiary);
   border-radius: 2rem;
+}
+
+#typeIcon i {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--gf-primary);
 }
 
 #info {
@@ -47,7 +58,9 @@ li:last-child {
 }
 
 #montant {
+  font-size: 20px;
   width: fit-content;
   min-width: 5ch;
   text-align: right;
+  margin-right: 10px;
 }

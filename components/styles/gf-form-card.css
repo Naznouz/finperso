@@ -1,0 +1,17 @@
+@import url('/components/styles/gf-base.css');
+
+div.card {
+  margin: 5px;
+  padding: 10px;
+  padding-top: 0;
+  border: 1px solid var(--gf-translucid);
+  border-radius: 5px;
+}
+
+form {
+  display: none;
+}
+
+form.reveal {
+  display: block;
+}

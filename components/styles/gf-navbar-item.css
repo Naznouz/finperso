@@ -1,0 +1,8 @@
+@import url('/components/styles/gf-base.css');
+
+li {
+  font-size: 18px;
+  padding: 5px 15px;
+  border: 1px solid var(--gf-translucid);
+  border-radius: 0.125rem;
+}

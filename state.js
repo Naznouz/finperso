@@ -8,6 +8,7 @@ export class State {
     }
     State._instance = this
     this._state = {}
+    this._listeners = [];
     if (!localStorage.getItem('state')) {
       this.state = {
         data: []
@@ -22,11 +23,19 @@ export class State {
   }
 
   set state (val) {
+    for (let l of this._listeners) {
+        l();
+    }
+    
     this._state = {
       ...this._state,
       ...val
     }
     localStorage.setItem('state', JSON.stringify(this._state))
+  }
+
+  addListener(callback) {
+    this._listeners.push(callback)
   }
 }
 

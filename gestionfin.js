@@ -32,8 +32,7 @@ function deleteData (index) {
   console.log('Delete index: ', index)
   const data = appState.state.data
   data.splice(index, 1)
-  appState.state.data = data
-  afficheData()
+  appState.state = { data }
 }
 
 function deleteButton (index) {
@@ -84,7 +83,6 @@ function saveData () {
     })
 
     appState.state = { data }
-    afficheData()
   }
 }
 
