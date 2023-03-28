@@ -1,13 +1,14 @@
-h2 {
-  color: red;
-}
+@import url("/components/styles/gf-base.css");
 
-#form-card {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
+details {
+  background-color: var(--gf-background);
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--gf-main);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0.75rem 1.25rem;
+  width: max-content;
 }

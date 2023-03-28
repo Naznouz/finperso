@@ -13,12 +13,8 @@
 
 <body>
   <h1>Finances Perso</h1>
-  <section>
-    <gf-form-card>
-    </gf-form-card>
-  </section>
   <section id="saisie">
-    <form>
+    <gf-form-card>
       <gf-type-selection id="type">
         <label slot="label" for="type"> Type de d&eacute;pense :</label>
         <option value="">Choisir type dépense</option>
@@ -36,10 +32,10 @@
         <label for="date"> Date de la d&eacute;pense : </label>
         <input id="date" name="date" type="date" value="" required />
       </div>
-      <button id="btn-soumettre" type="button" onclick="saveData();">
+      <gf-button id="btn-soumettre" type="button" onclick="saveData();">
         Ajouter d&eacute;pense
-      </button>
-    </form>
+      </gf-button>
+    </gf-form-card>
   </section>
   <section id="affichage">
     <table id="depenses">
