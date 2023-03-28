@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="./state.js" type="module"></script>
     <script src="./components.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/1d35c13e62.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>Finances Perso</h1>
@@ -32,9 +33,12 @@
           <label for="date"> Date de la d&eacute;pense : </label>
           <input id="date" name="date" type="date" value="" required />
         </div>
-        <button id="btn-soumettre" type="button" onclick="saveData();">
+        <!-- <button id="btn-soumettre" type="button" onclick="saveData();">
           Ajouter d&eacute;pense
-        </button>
+        </button> -->
+        <gf-button icon="plus" onclick="plus()">plus</gf-button>
+        <gf-button icon="minus" onclick="minus()">minus</gf-button>
+        <gf-button icon="triangle" onclick="triangle()">triangle</gf-button>
       </form>
     </section>
     <section id="affichage">

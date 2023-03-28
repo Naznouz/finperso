@@ -88,3 +88,15 @@ function saveData () {
   }
 }
 
+// Onclick Functions
+function triangle() {
+  alert('Triangle')
+}
+
+function plus() {
+  alert('Plus')
+}
+
+function minus() {
+  alert('Minus')
+}
