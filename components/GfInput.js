@@ -1,30 +1,27 @@
-import {html, css, GfBase} from './GfBase.js';
+import { html, css, GfBase } from './GfBase.js'
 
 export default class GfInput extends GfBase {
-  constructor() {
-    super();
+  constructor () {
+    super()
     this.shadowRoot.innerHTML = html`
-      <link rel="stylesheet" href="/components/styles/gf-input.css">
-      <slot name="label"></slot>
-      <slot name="input"></slot>
-      <slot name="aide"></slot>
-      <slot name="erreur"></slot>
-    `;
+      <link rel="stylesheet" href="/components/styles/gf-input.css" />
+      <div id="label"><slot name="label"></slot></div>
+      <div id="input"></div>
+      <div id="aide"><slot name="aide"></slot></div>
+      <div id="erreur"><slot name="erreur"></slot></div>
+    `
   }
 
-  connectedCallback() {
-    
+  connectedCallback () {}
+
+  disconnectCallback () {}
+
+  observedAttributes () {
+    return ['valid']
   }
 
-  disconnectCallback() {
-    
-  }
-
-  observedAttributes() {
-    return ['valid'];
-  }
-
-  attributeChangeCallback(name, oldValue, newValue) {
-    console.log(name, oldValue, newValue);
+  attributeChangeCallback (name, oldValue, newValue) {
+    console.log(name, oldValue, newValue)
   }
 }
+
