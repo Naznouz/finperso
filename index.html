@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finances Perso</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./state.js" type="module"></script>
-    <script src="./components.js" type="module"></script>
-  </head>
-  <body>
-    <h1>Finances Perso</h1>
-    <section id="saisie">
-      <form>
-        <gf-type-selection id="type">
-          <label slot="label" for="type"> Type de d&eacute;pense :</label>
-          <option value="">Choisir type dépense</option>
-          <option value="alimentation">Alimentation</option>
-          <option value="vetements">V&ecirc;tements</option>
-          <option value="loisirs">Loisirs</option>
-          <option value="loyer">Loyer</option>
-        </gf-type-selection>
-        <gf-number-input value="0" id="montant">
-          <label slot="label">Montant</label>
-          <span slot="aide"
-            >Saisir un nombre positif. Les décimales (.) sont autorisées.</span
-          >
-          <span slot="erreur">Le montant saisie est erronée.</span>
-        </gf-number-input>
-        <div id="input-date">
-          <label for="date"> Date de la d&eacute;pense : </label>
-          <input id="date" name="date" type="date" value="" required />
-        </div>
-        <button id="btn-soumettre" type="button" onclick="saveData();">
-          Ajouter d&eacute;pense
-        </button>
-      </form>
-    </section>
-    <section id="affichage">
-      <table id="depenses">
-        <thead>
-          <th>Id</th>
-          <th>Date</th>
-          <th>Type</th>
-          <th>Montant</th>
-          <th>Supprimer</th>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-    <section id="transactions">
-      <gf-liste-transactions></gf-liste-transactions>
-    </section>
-    <script src="./gestionfin.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Finances Perso</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./state.js" type="module"></script>
+        <script src="./components.js" type="module"></script>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <gf-navbar>
+            <gf-navbar-item href="/">Accueil</gf-navbar-item>
+            <gf-navbar-item href="/transactions">Transactions</gf-navbar-item>
+            <gf-navbar-item href="/depenses">Dépenses</gf-navbar-item>
+        </gf-navbar>
+        <h1>Finances Perso</h1>
+        <section id="affichage">
+            <table id="depenses">
+                <thead>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Montant</th>
+                    <th>Supprimer</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section id="transactions">
+            <gf-liste-transactions></gf-liste-transactions>
+        </section>
+        <gf-form-card>
+            <form>
+                <gf-type-selection id="type">
+                    <label slot="label" for="type"> Type de d&eacute;pense :</label>
+                    <option value="">Choisir type dépense</option>
+                    <option value="alimentation">Alimentation</option>
+                    <option value="vetements">V&ecirc;tements</option>
+                    <option value="loisirs">Loisirs</option>
+                    <option value="loyer">Loyer</option>
+                </gf-type-selection>
+                <gf-number-input value="0" id="montant">
+                    <label slot="label">Montant</label>
+                    <span slot="aide">Saisir un nombre positif. Les décimales (.) sont autorisées.</span>
+                    <span slot="erreur">Le montant saisie est erronée.</span>
+                </gf-number-input>
+                <div id="input-date">
+                    <label for="date"> Date de la d&eacute;pense : </label>
+                    <input id="date" name="date" type="date" value="" required />
+                </div>
+                <gf-button
+                    id="btn-soumettre"
+                    btnIcon="<i class='fa fa-solid fa-plus'></i>"
+                    btnText="Ajouter la dépense"
+                    onclick="saveData();"
+                ></gf-button>
+            </form>
+        </gf-form-card>
+        <script src="./gestionfin.js"></script>
+    </body>
 </html>
-
-<!--
-  Les différentes notations :
-camelCase
-kebab-case
-NotationHongroise
-
--->

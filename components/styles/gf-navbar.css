@@ -1,0 +1,15 @@
+@import url("/components/styles/gf-base.css");
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: var(--gf-translucid);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}

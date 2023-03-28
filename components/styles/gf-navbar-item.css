@@ -1,0 +1,19 @@
+@import url("/components/styles/gf-base.css");
+
+li {
+    background: var(--gf-translucid);
+    padding: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s ease-in;
+}
+
+li:hover {
+    background: var(--gf-main);
+}
+
+li a {
+    color: var(--gf-surface);
+    text-decoration: none;
+}

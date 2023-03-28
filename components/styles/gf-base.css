@@ -1,14 +1,16 @@
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
 * {
-  --gf-primary: #3b46f1;
-  --gf-secondary: #fdc92e;
-  --gf-tertiary: #9b9eb2;
-  --gf-main: #161616;
-  --gf-surface: #fafafa;
-  --gf-background: #f5f5f5;
-  --gf-on-primary: #ffffff;
-  --gf-on-secondary: #161616;
-  --gf-on-tertiary: #161616;
-  --gf-translucid: #80808080;
-  --gf-error: pink;
-  --gf-on-error: red;
+    --gf-primary: #3b46f1;
+    --gf-secondary: #fdc92e;
+    --gf-tertiary: #9b9eb2;
+    --gf-main: #161616;
+    --gf-surface: #fafafa;
+    --gf-background: #f5f5f5;
+    --gf-on-primary: #ffffff;
+    --gf-on-secondary: #161616;
+    --gf-on-tertiary: #161616;
+    --gf-translucid: #80808080;
+    --gf-error: pink;
+    --gf-on-error: red;
 }

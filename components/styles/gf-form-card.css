@@ -1,0 +1,38 @@
+@import url("/components/styles/gf-base.css");
+
+.gf-form-card {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.gf-form-card .button {
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.gf-form-card .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    border-top: 1px solid var(--gf-translucid);
+    background-color: var(--gf-surface);
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.4s ease-in;
+}
+
+.gf-form-card .content.active {
+    pointer-events: all;
+    transform: translate3d(0, 0, 0);
+}
+
+.gf-form-card .content .inner {
+    padding: 1rem;
+}
