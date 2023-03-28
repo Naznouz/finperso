@@ -24,6 +24,15 @@ slot[name='label'] {
   width: 100%;
 }
 
+#input select {
+  margin: 0.5rem;
+  background-color: transparent;
+  border: 0px;
+  padding: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 slot[name='aide'] {
   visibility: visible;
   color: var(--gf-tertiary);
@@ -34,4 +43,3 @@ slot[name='erreur'] {
   background-color: var(--gf-error);
   color: var(--gf-on-error);
 }
-

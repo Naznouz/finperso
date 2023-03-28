@@ -7,8 +7,8 @@ export default class GfNumberInput extends GfInput {
   }
 
   connectedCallback () {
-    const inputElem = this.shadowRoot.querySelector('#input')
-    inputElem.innerHTML = html`
+    const inputHostElem = this.shadowRoot.querySelector('#input')
+    inputHostElem.innerHTML = html`
       <input
         type="number"
         name="${this.name}"
@@ -18,12 +18,18 @@ export default class GfNumberInput extends GfInput {
       />
       EUR
     `
+
+    const inputElem = inputHostElem.querySelector('input')
+    inputElem.addEventListener('input', (e) => {
+      this.setAttribute('value', e.target.value)
+    })
+
     const event = new Event((e) => {
       console.log('focused')
       this.shadowRoot.querySelector("slot[name='aide']").style.visibility =
         'visible'
     })
-    inputElem.addEventListener('focus', (e) => {
+    inputHostElem.addEventListener('focus', (e) => {
       e.dispatchEvent(event)
     })
   }
@@ -64,4 +70,3 @@ export default class GfNumberInput extends GfInput {
     this.name = this.setAttribute('value', val)
   }
 }
-
