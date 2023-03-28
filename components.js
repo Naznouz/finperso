@@ -3,12 +3,14 @@ import GfButton from './components/GfButton.js';
 import GfListeTransactions from './components/GfListeTransactions.js';
 import GfSpacer from './components/GfSpacer.js';
 import GfNumberInput from './components/GfNumberInput.js';
+import GfDateSelection from './components/GfDateSelection.js';
 
 window.customElements.define('gf-select', GfSelect);
 window.customElements.define('gf-button', GfButton);
 window.customElements.define('gf-liste-transactions', GfListeTransactions);
 window.customElements.define('gf-spacer', GfSpacer);
 window.customElements.define('gf-number-input', GfNumberInput);
+window.customElements.define('gf-date', GfDateSelection);
 
 // S'il s'agit d'une extension d'un élément HTML bien définie, par exemple, table
 // il faut
