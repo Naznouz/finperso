@@ -8,6 +8,7 @@ export default class GfNumberInput extends GfInput {
 
   connectedCallback () {
     const inputHostElem = this.shadowRoot.querySelector('#input')
+
     inputHostElem.innerHTML = html`
       <input
         type="number"
@@ -20,6 +21,7 @@ export default class GfNumberInput extends GfInput {
     `
 
     const inputElem = inputHostElem.querySelector('input')
+
     inputElem.addEventListener('input', (e) => {
       this.setAttribute('value', e.target.value)
     })
@@ -30,19 +32,25 @@ export default class GfNumberInput extends GfInput {
         'visible'
     })
 
+    const blurEvent = () =>
+      new CustomEvent('gf-blur', {
+        bubbles: true,
+        detail: {
+          value: this.value
+        }
+      })
+
     inputElem.addEventListener('blur', (e) => {
       console.log('blurred 1')
       this.shadowRoot.querySelector("slot[name='aide']").style.visibility =
         'hidden'
+      inputHostElem.dispatchEvent(blurEvent())
     })
 
-    const event = new Event((e) => {
-      console.log('focused 2')
-      this.shadowRoot.querySelector("slot[name='aide']").style.visibility =
-        'visible'
-    })
-    inputHostElem.addEventListener('focus', (e) => {
-      e.dispatchEvent(event)
+    inputHostElem.addEventListener('gf-blur', (e) => {
+      console.log('blurred 2')
+      console.log('Target event: ', e.target)
+      console.log('Received data: ', e.detail)
     })
   }
 
