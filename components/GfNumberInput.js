@@ -24,8 +24,20 @@ export default class GfNumberInput extends GfInput {
       this.setAttribute('value', e.target.value)
     })
 
+    inputElem.addEventListener('focus', (e) => {
+      console.log('focused 1')
+      this.shadowRoot.querySelector("slot[name='aide']").style.visibility =
+        'visible'
+    })
+
+    inputElem.addEventListener('blur', (e) => {
+      console.log('blurred 1')
+      this.shadowRoot.querySelector("slot[name='aide']").style.visibility =
+        'hidden'
+    })
+
     const event = new Event((e) => {
-      console.log('focused')
+      console.log('focused 2')
       this.shadowRoot.querySelector("slot[name='aide']").style.visibility =
         'visible'
     })
@@ -34,12 +46,12 @@ export default class GfNumberInput extends GfInput {
     })
   }
 
-  observedAttributes () {
-    return ['label', 'name', 'value']
+  static get observedAttributes () {
+    return super.observedAttributes.concat(['label'])
   }
 
-  attributeChangeCallback (name, oldValue, newValue) {
-    console.log('Attribute change:', name, oldVaue, newValue)
+  attributeChangedCallback (name, oldValue, newValue) {
+    // pass
   }
 
   get label () {
@@ -50,23 +62,8 @@ export default class GfNumberInput extends GfInput {
     this.label = this.setAttribute('label', val)
   }
 
-  get name () {
-    const n = this.getAttribute('name')
-    return !n
-      ? `number-${('' + Math.floor(Math.random() * 10000)).padStart(5, '0')}`
-      : n
-  }
-
-  set name (val) {
-    this.name = this.setAttribute('name', val)
-  }
-
   get value () {
     const v = this.getAttribute('value')
     return !v ? 0 : Math.round(v * 100) / 100
-  }
-
-  set value (val) {
-    this.name = this.setAttribute('value', val)
   }
 }

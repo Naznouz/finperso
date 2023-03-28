@@ -1,13 +1,17 @@
-import { html, css, GfBase } from './GfBase.js';
+import { html, css, GfBase } from './GfBase.js'
+import { useState } from '../state.js'
 
 export default class GfListeTransactions extends GfBase {
-  constructor() {
-    super();
+  constructor () {
+    super()
     this.shadowRoot.innerHTML = html`
-      <link rel="stylesheet" href="/components/styles/gf-liste-transactions.css">
+      <link
+        rel="stylesheet"
+        href="/components/styles/gf-liste-transactions.css"
+      />
       <h2>Liste des transactions</h2>
       <ul></ul>
-    `;
+    `
   }
 
   /*
@@ -20,12 +24,17 @@ export default class GfListeTransactions extends GfBase {
     ...
   ]
   */
-  connectedCallback() {
-    const elemListe = this.shadowRoot.querySelector("ul");
-    const data = JSON.parse(localStorage.getItem("data"));
+  connectedCallback () {
+    // add eventlistener on state change
+    this._updateList()
+  }
 
+  _updateList () {
+    const appState = useState()
+    const elemListe = this.shadowRoot.querySelector('ul')
+    const data = appState.state.data
     data.forEach((transact, index) => {
-      const elemItem = document.createElement("li");
+      const elemItem = document.createElement('li')
       elemItem.innerHTML = html`
         <div id="typeIcon"></div>
         <div id="info">
@@ -34,8 +43,9 @@ export default class GfListeTransactions extends GfBase {
           <div id="date">${transact.date}</div>
         </div>
         <div id="montant">${transact.montant}</div>
-      `;
-      elemListe.appendChild(elemItem);
-    });
+      `
+      elemListe.appendChild(elemItem)
+    })
   }
 }
+

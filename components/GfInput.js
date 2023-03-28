@@ -16,12 +16,30 @@ export default class GfInput extends GfBase {
 
   disconnectCallback () {}
 
-  observedAttributes () {
-    return ['valid']
+  static get observedAttributes () {
+    return ['valid', 'name', 'value']
   }
 
-  attributeChangeCallback (name, oldValue, newValue) {
+  attributeChangedCallback (name, oldValue, newValue) {
     console.log(name, oldValue, newValue)
   }
-}
 
+  get name () {
+    const n = this.getAttribute('name')
+    return !n
+      ? `number-${('' + Math.floor(Math.random() * 10000)).padStart(5, '0')}`
+      : n
+  }
+
+  set name (val) {
+    this.name = this.setAttribute('name', val)
+  }
+
+  get value () {
+    return this.getAttribute('value')
+  }
+
+  set value (val) {
+    this.name = this.setAttribute('value', val)
+  }
+}

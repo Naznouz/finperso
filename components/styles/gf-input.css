@@ -34,7 +34,7 @@ slot[name='label'] {
 }
 
 slot[name='aide'] {
-  visibility: visible;
+  visibility: hidden;
   color: var(--gf-tertiary);
 }
 

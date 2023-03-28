@@ -16,5 +16,9 @@ export default class GfTypeSelection extends GfInput {
     optionsElem.forEach((option) => {
       selectElem.appendChild(option)
     })
+
+    selectElem.addEventListener('change', (e) => {
+      this.setAttribute('value', e.target.value)
+    })
   }
 }
