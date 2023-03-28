@@ -19,16 +19,7 @@ export default class GfButton extends GfBase {
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'icon') {
       const buttonElem = this.shadowRoot.querySelector('button')
-
-      if(newValue === "plus") {
-        buttonElem.innerHTML = html`<i class="fa fa-plus"></i> <slot></slot>`
-      } else if (newValue === "minus") {
-        buttonElem.innerHTML = html`<i class="fa fa-minus"></i> <slot></slot>`
-      } else if (newValue === "triangle") {
-        buttonElem.innerHTML = html`<i class="fa fa-exclamation-triangle"></i> <slot></slot>`
-      } else {
-        buttonElem.innerHTML = html`<slot></slot>`
-      }
+      buttonElem.innerHTML = html`<i class="fa fa-${newValue}"></i> <slot></slot>`
     }
   }
 

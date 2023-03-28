@@ -1,63 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finances Perso</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./state.js" type="module"></script>
-    <script src="./components.js" type="module"></script>
-    <script src="https://kit.fontawesome.com/1d35c13e62.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <h1>Finances Perso</h1>
-    <section id="saisie">
-      <form>
-        <gf-type-selection id="type">
-          <label slot="label" for="type"> Type de d&eacute;pense :</label>
-          <option value="">Choisir type dépense</option>
-          <option value="alimentation">Alimentation</option>
-          <option value="vetements">V&ecirc;tements</option>
-          <option value="loisirs">Loisirs</option>
-          <option value="loyer">Loyer</option>
-        </gf-type-selection>
-        <gf-number-input value="0" id="montant">
-          <label slot="label">Montant</label>
-          <span slot="aide"
-            >Saisir un nombre positif. Les décimales (.) sont autorisées.</span
-          >
-          <span slot="erreur">Le montant saisie est erronée.</span>
-        </gf-number-input>
-        <div id="input-date">
-          <label for="date"> Date de la d&eacute;pense : </label>
-          <input id="date" name="date" type="date" value="" required />
-        </div>
-        <!-- <button id="btn-soumettre" type="button" onclick="saveData();">
-          Ajouter d&eacute;pense
-        </button> -->
-        <gf-button icon="plus" onclick="plus()">plus</gf-button>
-        <gf-button icon="minus" onclick="minus()">minus</gf-button>
-        <gf-button icon="triangle" onclick="triangle()">triangle</gf-button>
-      </form>
-    </section>
-    <section id="affichage">
-      <table id="depenses">
-        <thead>
-          <th>Id</th>
-          <th>Date</th>
-          <th>Type</th>
-          <th>Montant</th>
-          <th>Supprimer</th>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-    <section id="transactions">
-      <gf-liste-transactions></gf-liste-transactions>
-    </section>
-    <script src="./gestionfin.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finances Perso</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./state.js" type="module"></script>
+  <script src="./components.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/1d35c13e62.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Finances Perso</h1>
+  <section id="saisie">
+    <gf-form-card>
+      <gf-type-selection id="type">
+        <label slot="label" for="type"> Type de d&eacute;pense :</label>
+        <option value="">Choisir type dépense</option>
+        <option value="alimentation">Alimentation</option>
+        <option value="vetements">V&ecirc;tements</option>
+        <option value="loisirs">Loisirs</option>
+        <option value="loyer">Loyer</option>
+      </gf-type-selection>
+      <gf-number-input value="0" id="montant">
+        <label slot="label">Montant</label>
+        <span slot="aide">Saisir un nombre positif. Les décimales (.) sont autorisées.</span>
+        <span slot="erreur">Le montant saisie est erronée.</span>
+      </gf-number-input>
+      <div id="input-date">
+        <label for="date"> Date de la d&eacute;pense : </label>
+        <input id="date" name="date" type="date" value="" required />
+      </div>
+      <gf-button icon="plus" onclick="saveData()">Ajouter</gf-button>
+    </gf-form-card>
+  </section>
+  <section id="affichage">
+    <table id="depenses">
+      <thead>
+        <th>Id</th>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Montant</th>
+        <th>Supprimer</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  <section id="transactions">
+    <gf-liste-transactions></gf-liste-transactions>
+  </section>
+  <script src="./gestionfin.js"></script>
+</body>
+
 </html>
 
 <!--

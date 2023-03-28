@@ -28,6 +28,12 @@ export class State {
     }
     localStorage.setItem('state', JSON.stringify(this._state))
   }
+
+  // add event listener to the state
+  addEventListener (event, callback) {
+    document.addEventListener(event, callback)
+    
+  }
 }
 
 export function useState () {

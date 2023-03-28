@@ -20,3 +20,8 @@ form {
   padding: 0.5rem;
   box-sizing: border-box;
 }
+
+#saisie {
+  display: flex;
+  justify-content: center;
+}

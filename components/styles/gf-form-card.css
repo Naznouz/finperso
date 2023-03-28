@@ -1,0 +1,55 @@
+@import url('/components/styles/gf-base.css');
+
+i {
+    background-color: var(--gf-primary);
+    border-radius: 2rem;
+    border: none;
+    color: var(--gf-on-primary);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.75rem 1.25rem;
+    width: max-content;
+}
+  
+i:hover {
+    background-color: #2e37be;
+}
+
+details {
+    background-color: var(--gf-background);
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--gf-main);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.75rem 1.25rem;
+    width: 250px;
+}
+
+details > summary {
+    list-style-type: none;
+}
+
+details[open] > summary {
+    list-style-type: none;
+}
+
+details.description[open] i.opened {
+    display:block;
+  }
+
+details.description[open] i.closed {
+    display:none;
+  }
+
+  details.description:not([open]) i.closed {
+    display:block;
+  }
+
+details.description:not([open]) i.opened {
+    display:none;
+  }

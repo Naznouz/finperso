@@ -3,6 +3,7 @@
  * checkCbk is a function that takes the element Value and
  * check it.
  */
+
 function validate (elem, checkCbk) {
   if (!checkCbk(elem.value)) {
     elem.classList.add('invalid')
@@ -64,13 +65,14 @@ function rowFrom (depense, index) {
   rowElem.appendChild(montantCell)
   rowElem.appendChild(deleteCell)
 
-  console.log(rowElem)
+  // console.log(rowElem)
   return rowElem
 }
 
 function saveData () {
   const appState = useState()
   const data = appState.state.data
+  console.log('Save data: ', data)
 
   const type = document.querySelector('#type').value
   const montant = +document.querySelector('#montant').value
@@ -85,8 +87,10 @@ function saveData () {
 
     appState.state = { data }
     afficheData()
+    
   }
 }
+
 
 // Onclick Functions
 function triangle() {
