@@ -7,7 +7,8 @@ export default class GfNumberInput extends GfInput {
   }
 
   connectedCallback() {
-    this.innerHTML += html`
+    const inputElem = this.shadowRoot.querySelector("input");
+    inputElem.innerHTML += html`
     <div slot="input">
       <input
         type="number"
@@ -18,7 +19,7 @@ export default class GfNumberInput extends GfInput {
       /> EUR
     </div>
     `;
-    const inputElem = this.shadowRoot;
+    
     const event = new Event((e) => {
       console.log('focused');
       this.shadowRoot.querySelector("slot[name='aide']").style.visibility = "visible";
