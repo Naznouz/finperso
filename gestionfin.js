@@ -88,3 +88,10 @@ function saveData () {
   }
 }
 
+function minus() {
+  alert('minus')
+}
+
+function triangle(){
+  alert('triangle')
+}

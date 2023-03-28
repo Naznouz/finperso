@@ -6,7 +6,11 @@ export default class GfButton extends GfBase {
 
     this.shadowRoot.innerHTML = html`
       <link rel="stylesheet" href="/components/styles/gf-button.css" />
-      <button><slot></slot></button>
+      
+      
+      <button>
+      <i class="fa fa-solid fa-plus"></i>
+      <slot></slot></button>
     `
   }
 }

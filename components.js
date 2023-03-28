@@ -5,6 +5,7 @@ import GfSpacer from './components/GfSpacer.js'
 import GfNumberInput from './components/GfNumberInput.js'
 import GfTypeSelection from './components/GfTypeSelection.js'
 import { State, useState } from './state.js'
+import GfForm from './components/GfForm.js'
 
 window.customElements.define(GfTypeSelection.tag, GfTypeSelection)
 window.customElements.define('gf-button', GfButton)
@@ -13,6 +14,7 @@ window.customElements.define('gf-spacer', GfSpacer)
 window.customElements.define('gf-number-input', GfNumberInput)
 window.State = State
 window.useState = useState
+window.customElements.define('gf-form', GfForm)
 
 const appState = useState()
 
