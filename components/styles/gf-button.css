@@ -7,4 +7,11 @@ button {
   color: var(--gf-on-primary);
   font-weight: bold;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 1rem 1.75rem;
+}
+
+button:hover {
+  background-color: #2e37be;
 }
