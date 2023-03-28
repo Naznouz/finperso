@@ -1,11 +1,13 @@
 @import url('/components/styles/gf-base.css');
 
-slot[name="label"] {
+slot[name='label'] {
   font-weight: bold;
   margin-bottom: 0.25rem;
 }
 
 #input {
+  display: flex;
+  gap: 0.5rem;
   width: 100%;
   padding-block-start: 0.5rem;
   padding-top: 0.25rem;
@@ -16,13 +18,20 @@ slot[name="label"] {
   background-color: var(--gf-surface);
 }
 
-slot[name="aide"] {
+#input input {
+  border: 0px;
+  background-color: transparent;
+  width: 100%;
+}
+
+slot[name='aide'] {
   visibility: visible;
   color: var(--gf-tertiary);
 }
 
-slot[name="erreur"] {
+slot[name='erreur'] {
   display: none;
   background-color: var(--gf-error);
   color: var(--gf-on-error);
 }
+

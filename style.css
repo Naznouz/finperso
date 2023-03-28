@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap');
 
-html, body {
+html,
+body {
   font-family: 'Darker Grotesque', Arial, Helvetica, sans-serif;
 }
 
@@ -9,3 +10,8 @@ html, body {
   border-radius: 0.25rem;
   background-color: lightpink;
 }
+
+#affichage {
+  display: none;
+}
+
