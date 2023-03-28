@@ -1,10 +1,25 @@
 @import url('/components/styles/gf-base.css');
 
 button {
-  background-color: var(--gf-primary);
+  background: var(--gf-primary);
   border-radius: 0.125rem;
   border: none;
   color: var(--gf-on-primary);
   font-weight: bold;
   padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background: linear-gradient(0deg, rgba(14, 23, 31, 0.1), rgba(14, 23, 31, 0.1)), #186ade;
+}
+
+button:active {
+  background: linear-gradient(0deg, rgba(14, 23, 31, 0.2), rgba(14, 23, 31, 0.2)), #186ade;
+}
+
+button i {
+  margin: 0 0.5rem; 
 }

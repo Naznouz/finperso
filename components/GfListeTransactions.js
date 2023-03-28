@@ -10,7 +10,8 @@ export default class GfListeTransactions extends GfBase {
         href="/components/styles/gf-liste-transactions.css"
       />
       <h2>Liste des transactions</h2>
-      <ul></ul>
+      <ul>
+      </ul>
     `
   }
 
